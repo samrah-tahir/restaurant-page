@@ -1,1 +1,3 @@
-console.log('HELLLLOO');
+import {home}  from "./home.js"
+
+home();
