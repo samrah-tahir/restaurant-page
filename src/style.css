@@ -1,0 +1,17 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    /* background-image: url('../img/milkshake.png'); */
+    background-size: 50px;
+    background-repeat: space;
+}
+
+.decoration.bubble-tea{
+    width: 50px;
+}
+.bubble-tea img{
+    width: 100%;
+}
