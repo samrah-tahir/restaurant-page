@@ -3,7 +3,7 @@
 /**
  * PURPOSE: Navbar secion of the First page
  */
-const navbar = function (){
+export const navbar = function (){
     const header = document.createElement('header');
     const nav = document.createElement('nav');
     const ul = document.createElement('ul');
@@ -15,12 +15,16 @@ const navbar = function (){
     menuBtn.textContent = "Menu";
     contactBtn.textContent = "Contact"
 
-    const content = document.getElementById('content');
+    homeBtn.classList.add('home');
+    menuBtn.classList.add('menu');
+    contactBtn.classList.add('contact');
+
+    const body = document.querySelector('body');
     
     header.appendChild(nav);
     nav.appendChild(ul);
     ul.append(homeBtn, menuBtn, contactBtn);
-    content.appendChild(header);
+    body.prepend(header);
     
 }
 
@@ -92,7 +96,7 @@ const locationSec = function(){
 }
 
 export const home = function(){
-    navbar();
+    // navbar();
     heading();
     description();
     infoSection();

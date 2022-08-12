@@ -9,6 +9,21 @@ body{
     background-repeat: space;
 }
 
+header nav ul {
+    display: flex;
+    justify-content: center;
+}
+
+ul li {
+    list-style: none;
+    text-decoration: none;
+}
+
+.heading-container {
+    display: flex;
+    justify-content: center;
+}
+
 .decoration.bubble-tea{
     width: 50px;
 }
