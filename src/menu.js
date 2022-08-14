@@ -1,6 +1,5 @@
 import {ShakeStorage} from "./storage.js";
-import './menu.css'
-
+import './styles/menu.css'
 /**
  * PURPOSE: menu page for the restaurate website
  */
