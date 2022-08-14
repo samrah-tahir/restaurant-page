@@ -11,6 +11,11 @@ export const navbar = function (){
     const menuBtn = document.createElement('li');
     const contactBtn = document.createElement('li');
 
+    const ulDiv = document.createElement('div');
+    ulDiv.appendChild(ul)
+
+    header.appendChild(ulDiv);
+    
     homeBtn.textContent = "Home";
     menuBtn.textContent = "Menu";
     contactBtn.textContent = "Contact"
@@ -38,7 +43,7 @@ const heading = function(){
     headingContainer.classList.add('heading-container');
     logoImgContainer.classList.add('decoration', 'bubble-tea');
 
-    heading.textContent = "DRINK HOUSE";
+    heading.textContent = "Drink House";
     logoImg.src = "../img/bubble-tea.png";
 
     logoImgContainer.appendChild(logoImg);

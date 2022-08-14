@@ -1,0 +1,14 @@
+.item {
+    border: 1px solid black;
+    width: 400px;
+}
+.item > div{
+    height: 100px;
+    width: 100px;
+}
+
+.item img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}

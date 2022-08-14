@@ -1,4 +1,5 @@
-import {ShakeStorage} from "./storage.js"
+import {ShakeStorage} from "./storage.js";
+import './menu.css'
 
 /**
  * PURPOSE: menu page for the restaurate website
@@ -14,7 +15,7 @@ const heading  = function(){
     headingContainer.classList.add('heading-container');
     logoImgContainer.classList.add('decoration', 'bubble-tea');
 
-    heading.textContent = "MENU";
+    heading.textContent = "Menu";
     logoImg.src = "../img/bubble-tea.png";
 
     logoImgContainer.appendChild(logoImg);
@@ -42,10 +43,15 @@ const itemCardMaker = function(shake) {
     let itemCard = document.createElement('div');
     let shakeTitle = document.createElement('h3');
     let shakeImg = document.createElement('img');
+    let imgContainer = document.createElement('div');
+
     console.log(shake)
     shakeTitle.textContent = shake.name;
     shakeImg.src = shake.img;
-    itemCard.append(shakeTitle, shakeImg);
+    itemCard.classList.add(shake.name.split(' ').join('-').toLowerCase(), "item");
+
+    imgContainer.appendChild(shakeImg);
+    itemCard.append(shakeTitle, imgContainer);
 
     document.querySelector('.item-container').appendChild(itemCard);
 }
