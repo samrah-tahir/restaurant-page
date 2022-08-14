@@ -45,24 +45,27 @@ ul li:hover {
 
 #content{
     background-color: white;
+    text-align: center;
     padding: 20px 20px;
     width: 100%;
     flex: 1;
 }
 
 .heading-container, .description-outer, .info-hours {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    
 }
 
 .heading-container {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     font-family: 'Pacifico', cursive;
+    font-size: 26px;
 }
 
 .decoration.bubble-tea{
-    width: 50px;
-    
+    width: 112px;
     animation-name: floating;
     animation-duration: 3s;
     animation-iteration-count: infinite;
@@ -80,6 +83,10 @@ ul li:hover {
     transform: rotate(17deg);
 }
 
+.description-outer{
+    text-align: center;
+}
+
 .item-container {
     display: flex;
     flex-direction: column;
@@ -90,7 +97,6 @@ ul li:hover {
 .item {
     /* width: 100%; */
     /* max-width: 339px; */
-    /* max-height: 509px; */
     /* height: 44%; */
     position: relative;
     display: flex;
@@ -117,4 +123,14 @@ ul li:hover {
     border-radius: 0px 16px 0px 16px;
     padding: 7px 14px;
     font-size: 16px;
+}
+
+@media (min-width: 51.25rem){
+    #content {
+        width: 82%;
+    }
+
+    .item {
+        max-width: 57%;
+      }
 }
