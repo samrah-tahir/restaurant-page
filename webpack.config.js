@@ -1,9 +1,11 @@
 const path = require('path');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
+const TerserPlugin = require("terser-webpack-plugin");
 
 module.exports = {
-    mode: 'development',
+    mode: 'production',
     entry: { 
         main: './src/index.js',
     },
@@ -13,6 +15,15 @@ module.exports = {
         path: path.resolve(__dirname, 'dist'),
         assetModuleFilename: 'images/[name].[hash][ext][query]',
         clean: true, //cleans up previous cache files that have a diff hash
+    },
+
+    optimization: {
+        minimizer: [
+          // For webpack@5 you can use the `...` syntax to extend existing minimizers (i.e. `terser-webpack-plugin`), uncomment the next line
+          // `...`,
+          new CssMinimizerPlugin(),
+          new TerserPlugin(),
+        ],
     },
 
     plugins: [
