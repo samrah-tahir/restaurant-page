@@ -1,3 +1,4 @@
+import BubbleTeaLogo from '../img/bubble-tea.png'
 
 const heading  = function(){
     const headingContainer = document.createElement('div');
@@ -10,7 +11,7 @@ const heading  = function(){
     logoImgContainer.classList.add('decoration', 'bubble-tea');
 
     heading.textContent = "Contact";
-    logoImg.src = "../img/bubble-tea.png";
+    logoImg.src = BubbleTeaLogo;
 
     logoImgContainer.appendChild(logoImg);
     headingContainer.append(heading, logoImgContainer);

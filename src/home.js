@@ -1,3 +1,4 @@
+import BubbleTeaLogo from '../img/bubble-tea.png'
 //Loads the home page for Drink House Cafe
 
 /**
@@ -44,7 +45,7 @@ const heading = function(){
     logoImgContainer.classList.add('decoration', 'bubble-tea');
 
     heading.textContent = "Drink House";
-    logoImg.src = "../img/bubble-tea.png";
+    logoImg.src = BubbleTeaLogo;
 
     logoImgContainer.appendChild(logoImg);
     headingContainer.append(heading, logoImgContainer);

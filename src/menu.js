@@ -1,5 +1,7 @@
 import {ShakeStorage} from "./storage.js";
-import './styles/menu.css'
+import BubbleTeaLogo from '../img/bubble-tea.png';
+import './styles/menu.css';
+
 /**
  * PURPOSE: menu page for the restaurate website
  */
@@ -15,7 +17,7 @@ const heading  = function(){
     logoImgContainer.classList.add('decoration', 'bubble-tea');
 
     heading.textContent = "Menu";
-    logoImg.src = "../img/bubble-tea.png";
+    logoImg.src = BubbleTeaLogo;
 
     logoImgContainer.appendChild(logoImg);
     headingContainer.append(heading, logoImgContainer);
